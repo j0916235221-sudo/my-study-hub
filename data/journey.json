@@ -1,0 +1,30 @@
+[
+  {
+    "id": "journey-1",
+    "date": "2026-09",
+    "title": "萌生建立個人學習平台的想法",
+    "description": "【示範歷程】希望有一個不受演算法干擾、能純粹記錄學習軌跡與心得的專屬空間。",
+    "articleId": ""
+  },
+  {
+    "id": "journey-2",
+    "date": "2026-10",
+    "title": "探索 AI 輔助學習與結構化筆記方法",
+    "description": "【示範歷程】開始嘗試利用生成式 AI 協助梳理課堂概念，並思考如何維持長期筆記的一致性。",
+    "articleId": "demo-course-reflection-2026"
+  },
+  {
+    "id": "journey-3",
+    "date": "2026-11",
+    "title": "撰寫 AGENTS.md 並啟動 My Study Hub",
+    "description": "【示範歷程】制定完整的專案開發與視覺規範，打造藍紫色科技風格的個人學習儀表板。",
+    "articleId": "demo-ai-workflow-2026"
+  },
+  {
+    "id": "journey-4",
+    "date": "2026-12",
+    "title": "持續累積真實學習心得與月度回顧",
+    "description": "【示範歷程】預計逐步替換示範內容，記錄更多真實的課程收穫與成長故事。",
+    "articleId": ""
+  }
+]
