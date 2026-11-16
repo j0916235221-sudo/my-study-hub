@@ -1,0 +1,29 @@
+[
+  {
+    "id": "goal-demo-1",
+    "title": "【示範目標】建立個人數位學習知識庫",
+    "description": "透過 My Study Hub 持續累積課程心得與 AI 工具實踐紀錄，培養每週定期回顧的習慣。",
+    "progress": 65,
+    "targetDate": "2026-12-31",
+    "isDemo": true,
+    "isPlaceholder": false
+  },
+  {
+    "id": "goal-demo-2",
+    "title": "【示範目標】完成 10 篇跨領域學習心得整理",
+    "description": "練習將課堂知識與日常觀察轉化為結構清晰、易於閱讀的分享文章。",
+    "progress": 40,
+    "targetDate": "2027-01-31",
+    "isDemo": true,
+    "isPlaceholder": false
+  },
+  {
+    "id": "goal-empty-1",
+    "title": "待設定的新學習目標",
+    "description": "預留目標卡片欄位，未來可隨時透過編輯 data/goals.json 填入屬於 Joyce 的下一個階段性目標。",
+    "progress": 0,
+    "targetDate": "尚未設定",
+    "isDemo": false,
+    "isPlaceholder": true
+  }
+]
