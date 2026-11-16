@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Study Hub — 學習儀表板</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="My Study Hub 首頁">
+        <img src="assets/images/logo.svg" alt="My Study Hub Logo">
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false">☰</button>
+      <nav aria-label="主導覽列">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home｜首頁</a></li>
+          <li><a href="reflections.html" class="nav-link">Reflections｜學習心得</a></li>
+          <li><a href="journey.html" class="nav-link">Journey｜學習歷程</a></li>
+          <li><a href="journal.html" class="nav-link">Monthly Journal｜月度日記</a></li>
+          <li><a href="about.html" class="nav-link">About｜關於我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section">
+      <div class="hero-badge">✦ Futuristic Personal Knowledge Management</div>
+      <h1 class="hero-title">My Study Hub</h1>
+      <p class="hero-subtitle">記錄每一步成長，累積每一份收穫的專屬數位知識庫</p>
+      <p class="hero-desc">
+        這是一個融合藍紫色科技風格與結構化筆記的個人學習平台。在這裡整理上課心得、追蹤學習目標、回顧成長歷程。
+      </p>
+      <div class="hero-actions">
+        <a href="reflections.html" class="btn btn-primary">探索學習心得 →</a>
+        <a href="journey.html" class="btn btn-secondary">檢視學習歷程</a>
+      </div>
+    </section>
+
+    <section class="dashboard-section" aria-label="數據總覽">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>Overview Stats</span> 學習數據總覽
+        </h2>
+      </div>
+      <div class="stats-grid" id="stats-grid">
+        <!-- 動態載入統計數據 -->
+      </div>
+    </section>
+
+    <section class="dashboard-section" aria-label="學習目標追蹤">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>Learning Goals</span> 近期學習目標
+        </h2>
+      </div>
+      <div class="goals-grid" id="goals-grid">
+        <!-- 動態載入目標卡片 -->
+      </div>
+    </section>
+
+    <section class="dashboard-section" aria-label="最新學習心得">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>Latest Reflections</span> 最新學習心得
+        </h2>
+        <a href="reflections.html" class="section-link">查看全部文章 →</a>
+      </div>
+      <div class="articles-grid" id="recent-articles-grid">
+        <!-- 動態載入最新文章 -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-tagline">My Study Hub — 記錄每一步成長，累積每一份收穫。</p>
+      <p>© 2026 Joyce. Built with Futuristic Blue-Purple Tech Theme &amp; AGENTS.md Standards.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="回到頁面頂端" title="回到頂端">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const articles = await loadData("articles");
+      const goals = await loadData("goals");
+      renderDynamicStats(articles, "stats-grid");
+      renderGoals(goals.slice(0, 3), "goals-grid");
+      
+      const recentGrid = document.getElementById("recent-articles-grid");
+      if (recentGrid) {
+        const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+        recentGrid.innerHTML = sorted.slice(0, 2).map(createArticleCardHTML).join("");
+      }
+    });
+  </script>
+</body>
+</html>

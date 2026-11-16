@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey｜學習歷程 | My Study Hub</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="My Study Hub 首頁">
+        <img src="assets/images/logo.svg" alt="My Study Hub Logo">
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false">☰</button>
+      <nav aria-label="主導覽列">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home｜首頁</a></li>
+          <li><a href="reflections.html" class="nav-link">Reflections｜學習心得</a></li>
+          <li><a href="journey.html" class="nav-link active">Journey｜學習歷程</a></li>
+          <li><a href="journal.html" class="nav-link">Monthly Journal｜月度日記</a></li>
+          <li><a href="about.html" class="nav-link">About｜關於我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section" style="padding: 36px 30px;">
+      <div class="hero-badge">✦ Milestones &amp; Growth Timeline</div>
+      <h1 class="hero-title" style="font-size: clamp(1.8rem, 3.8vw, 2.6rem);">Journey｜學習歷程</h1>
+      <p class="hero-desc" style="margin-bottom: 0;">
+        以時間軸形式記錄專案開發、重要里程碑與跨領域探索的軌跡。左右滾動或點擊控制按鈕即可瀏覽每個階段的成長故事。
+      </p>
+    </section>
+
+    <section class="dashboard-section" aria-label="學習歷程時間軸">
+      <div class="timeline-wrapper">
+        <div class="timeline-controls">
+          <button type="button" class="btn btn-secondary" id="timeline-prev" aria-label="向左滾動時間軸">← 往左</button>
+          <button type="button" class="btn btn-secondary" id="timeline-next" aria-label="向右滾動時間軸">往右 →</button>
+        </div>
+        <div class="timeline-scroll" id="journey-timeline">
+          <!-- 動態載入時間軸項目 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-tagline">My Study Hub — 記錄每一步成長，累積每一份收穫。</p>
+      <p>© 2026 Joyce. Built with Futuristic Blue-Purple Tech Theme &amp; AGENTS.md Standards.</p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="回到頁面頂端" title="回到頂端">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const journeyData = await loadData("journey");
+      renderJourney(journeyData, "journey-timeline");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About｜關於我 | My Study Hub</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="My Study Hub 首頁">
+        <img src="assets/images/logo.svg" alt="My Study Hub Logo">
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false">☰</button>
+      <nav aria-label="主導覽列">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home｜首頁</a></li>
+          <li><a href="reflections.html" class="nav-link">Reflections｜學習心得</a></li>
+          <li><a href="journey.html" class="nav-link">Journey｜學習歷程</a></li>
+          <li><a href="journal.html" class="nav-link">Monthly Journal｜月度日記</a></li>
+          <li><a href="about.html" class="nav-link active">About｜關於我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section" style="padding: 36px 30px;">
+      <div class="hero-badge">✦ About Me &amp; Philosophy</div>
+      <h1 class="hero-title" style="font-size: clamp(1.8rem, 3.8vw, 2.6rem);">About｜關於我</h1>
+      <p class="hero-desc" style="margin-bottom: 0;">
+        這裡記錄了我的學習背景、熱衷的專業領域、技術棧，以及建立 My Study Hub 的核心初衷。
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 48px;">
+      <section class="glass-card">
+        <h2 class="section-title" style="font-size: 1.3rem; margin-bottom: 14px;">
+          <span>Background</span> 個人簡介與方向
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 14px; line-height: 1.8;">
+          嗨！我是 Joyce。目前專注於材料科學與工程領域的學習，同時對人工智慧應用、網頁前端開發以及數位知識管理充滿熱情。
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          設立這個數位知識庫的初衷，是希望透過結構化的方式記錄每一堂課的收穫、專案實作的筆記與跨領域探索的心得，打造一個不受演算法干擾、能純粹沉澱思考的專屬空間。
+        </p>
+      </section>
+
+      <section class="glass-card">
+        <h2 class="section-title" style="font-size: 1.3rem; margin-bottom: 14px;">
+          <span>Tech Stack</span> 常用技術與工具
+        </h2>
+        <ul style="color: var(--text-secondary); padding-left: 20px; line-height: 2;">
+          <li><strong>前端與介面</strong>：HTML5, CSS3 (Glassmorphism), JavaScript (ES6+)</li>
+          <li><strong>資料管理</strong>：JSON 結構化資料庫、Markdown 筆記格式</li>
+          <li><strong>AI 協作與自動化</strong>：AGENTS.md 規範驅動開發、Python 輔助工作流</li>
+          <li><strong>核心學習領域</strong>：材料科學、工程物理、數位知識管理</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="glass-card" style="margin-bottom: 48px;">
+      <h2 class="section-title" style="font-size: 1.3rem; margin-bottom: 14px;">
+        <span>Core Values</span> 核心學習原則
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px;">
+        <div style="background: rgba(6, 9, 24, 0.45); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(129, 140, 248, 0.15);">
+          <h4 style="color: var(--accent-blue); margin-bottom: 8px;">1. 結構化輸出</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary);">將零散的課堂筆記轉化為條理分明的核心知識卡片與心得文章。</p>
+        </div>
+        <div style="background: rgba(6, 9, 24, 0.45); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(129, 140, 248, 0.15);">
+          <h4 style="color: var(--accent-indigo); margin-bottom: 8px;">2. 定期深度回顧</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary);">透過月度日記與學習歷程時間軸，檢視成長軌跡並調整下一步方向。</p>
+        </div>
+        <div style="background: rgba(6, 9, 24, 0.45); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(129, 140, 248, 0.15);">
+          <h4 style="color: var(--accent-purple); margin-bottom: 8px;">3. AI 高效協作</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary);">善用 AGENTS.md 規範文件，讓 AI 成為長期陪伴的知識管理夥伴。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-tagline">My Study Hub — 記錄每一步成長，累積每一份收穫。</p>
+      <p>© 2026 Joyce. Built with Futuristic Blue-Purple Tech Theme &amp; AGENTS.md Standards.</p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="回到頁面頂端" title="回到頂端">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflections｜學習心得 | My Study Hub</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="My Study Hub 首頁">
+        <img src="assets/images/logo.svg" alt="My Study Hub Logo">
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false">☰</button>
+      <nav aria-label="主導覽列">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home｜首頁</a></li>
+          <li><a href="reflections.html" class="nav-link active">Reflections｜學習心得</a></li>
+          <li><a href="journey.html" class="nav-link">Journey｜學習歷程</a></li>
+          <li><a href="journal.html" class="nav-link">Monthly Journal｜月度日記</a></li>
+          <li><a href="about.html" class="nav-link">About｜關於我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section" style="padding: 36px 30px;">
+      <div class="hero-badge">✦ Knowledge &amp; Reflections</div>
+      <h1 class="hero-title" style="font-size: clamp(1.8rem, 3.8vw, 2.6rem);">Reflections｜學習心得</h1>
+      <p class="hero-desc" style="margin-bottom: 0;">
+        整理不同主題的學習筆記、課堂反思與工具使用經驗。你可以透過關鍵字搜尋或切換下方分類，快速找到想閱讀的內容。
+      </p>
+    </section>
+
+    <section class="dashboard-section" aria-label="文章搜尋與分類篩選">
+      <div class="filter-bar">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" id="article-search" class="search-input" placeholder="搜尋文章標題、摘要或標籤關鍵字..." aria-label="搜尋學習心得">
+        </div>
+        <div class="category-filters" role="group" aria-label="文章分類篩選">
+          <button type="button" class="filter-btn active" data-category="all">全部分類</button>
+          <button type="button" class="filter-btn" data-category="course">學校課程與上課心得</button>
+          <button type="button" class="filter-btn" data-category="ai-tools">AI 工具使用心得</button>
+          <button type="button" class="filter-btn" data-category="growth">生活中的學習與成長</button>
+          <button type="button" class="filter-btn" data-category="future-goals">個人目標與未來規劃</button>
+        </div>
+        <div id="result-count" style="font-size: 0.9rem; color: var(--text-muted);"></div>
+      </div>
+
+      <div class="articles-grid" id="reflections-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-tagline">My Study Hub — 記錄每一步成長，累積每一份收穫。</p>
+      <p>© 2026 Joyce. Built with Futuristic Blue-Purple Tech Theme &amp; AGENTS.md Standards.</p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="回到頁面頂端" title="回到頂端">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const articles = await loadData("articles");
+      initReflectionsPage(articles);
+    });
+  </script>
+</body>
+</html>
